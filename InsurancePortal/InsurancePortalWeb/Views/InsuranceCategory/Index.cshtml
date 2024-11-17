@@ -1,0 +1,34 @@
+﻿@model List<InsuranceCategory> // list that we get from the controller
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2>
+                Insurance Category List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="InsuranceCategory" asp-action="Create" class="btn">
+                <i class="bi bi-plus-circle"></i> Create New Category
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>GUID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(u=>u.Name))
+            {
+                <tr>
+                    <td>@obj.Id</td>
+                    <td>@obj.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -6,10 +6,8 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     public DbSet<InsuranceCategory> InsuranceCategories { get; set; }
-    public DbSet<InsuranceType> InsuranceTypes { get; set; }
     public DbSet<Insurance> Insurances { get; set; }
     public DbSet<Customer> Customers { get; set; }
-    public DbSet<PolicyPurchase> PolicyPurchases { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -17,10 +15,8 @@ public class ApplicationDbContext : DbContext
 
         // Set default GUID generation in the database
         modelBuilder.Entity<InsuranceCategory>().Property(e => e.Id).HasDefaultValueSql("NEWID()");
-        modelBuilder.Entity<InsuranceType>().Property(e => e.Id).HasDefaultValueSql("NEWID()");
         modelBuilder.Entity<Insurance>().Property(e => e.Id).HasDefaultValueSql("NEWID()");
         modelBuilder.Entity<Customer>().Property(e => e.Id).HasDefaultValueSql("NEWID()");
-        modelBuilder.Entity<PolicyPurchase>().Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
         // Configure precision and scale for decimal properties
         modelBuilder.Entity<Insurance>()
