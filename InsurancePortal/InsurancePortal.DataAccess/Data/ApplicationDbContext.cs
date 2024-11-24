@@ -1,4 +1,4 @@
-﻿using InsurancePortalWeb.Models;
+﻿using InsurancePortal.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class ApplicationDbContext : DbContext

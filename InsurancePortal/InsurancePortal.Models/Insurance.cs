@@ -1,4 +1,4 @@
-﻿using InsurancePortalWeb.Models;
+﻿using InsurancePortal.Models;
 
 public class Insurance
 {
