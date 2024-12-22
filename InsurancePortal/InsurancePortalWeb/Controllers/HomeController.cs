@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using InsurancePortal_Web.Models;
+using InsurancePortalWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InsurancePortal_Web.Controllers
+namespace InsurancePortalWeb.Controllers
 {
     public class HomeController : Controller
     {

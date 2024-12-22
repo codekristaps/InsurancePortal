@@ -1,0 +1,41 @@
+﻿@model List<Insurance>
+
+<h1>Insurance List</h1>
+
+<table class="table table-bordered table-stripped">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.Id
+                </td>
+                <td>
+                    @obj.Name
+                </td>
+                <td>
+                    @obj.Description
+                </td>
+                <td>
+                    $@obj.Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
