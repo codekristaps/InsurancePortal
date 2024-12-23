@@ -1,41 +1,53 @@
 ﻿@model List<Insurance>
 
-<h1>Insurance List</h1>
-
-<table class="table table-bordered table-stripped">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Price
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var obj in Model)
-        {
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2>
+                Insurance List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Insurance" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Create New Insurance
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
             <tr>
-                <td>
-                    @obj.Id
-                </td>
-                <td>
-                    @obj.Name
-                </td>
-                <td>
-                    @obj.Description
-                </td>
-                <td>
-                    $@obj.Price
-                </td>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>
+                        @obj.Id
+                    </td>
+                    <td>
+                        @obj.Name
+                    </td>
+                    <td>
+                        @obj.Description
+                    </td>
+                    <td>
+                        $@obj.Price
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

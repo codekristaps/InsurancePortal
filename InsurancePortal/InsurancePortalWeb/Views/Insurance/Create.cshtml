@@ -1,0 +1,35 @@
+﻿@model Insurance
+
+<form method="post">
+    <div class="border p-3 mt-3">
+        <div class="row pb-2">
+            <h2>Create Insurance</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Description" class="p-0">Decription</label>
+            <input asp-for="Description" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Price" class="p-0"></label>
+            <input asp-for="Price" class="form-control" required pattern="^\d+(,\d{1,2})?$" />
+            <small>Use a comma (,) for decimals, e.g., 299,99</small>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="ImageUrl" class="p-0"></label>
+            <input asp-for="ImageUrl" class="form-control" />
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Create</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Insurance" asp-action="Index" class="btn btn-secondary form-control">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
