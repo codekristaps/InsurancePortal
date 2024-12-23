@@ -17,6 +17,9 @@
         <thead>
             <tr>
                 <th>
+                    Image
+                </th>
+                <th>
                     Id
                 </th>
                 <th>
@@ -28,12 +31,16 @@
                 <th>
                     Price
                 </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var obj in Model)
             {
                 <tr>
+                    <td>
+                        <img src="@obj.ImageUrl" height="100px" />
+                    </td>
                     <td>
                         @obj.Id
                     </td>
@@ -45,6 +52,16 @@
                     </td>
                     <td>
                         $@obj.Price
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-controller="Insurance" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <a asp-controller="Insurance" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash-fill"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             }

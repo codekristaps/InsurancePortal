@@ -3,8 +3,13 @@
 <form method="post">
     <div class="border p-3 mt-3">
         <div class="row pb-2">
-            <h2>Create Insurance</h2>
+            <h2>Update Insurance</h2>
             <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Id" class="p-0"></label>
+            <input asp-for="Id" class="form-control" disabled/>
+            <span asp-validation-for="Id" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
             <label asp-for="Name" class="p-0"></label>
@@ -12,7 +17,7 @@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Description" class="p-0"></label>
+            <label asp-for="Description" class="p-0">Decription</label>
             <input asp-for="Description" class="form-control" />
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
@@ -28,7 +33,7 @@
         </div>
         <div class="row">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-primary form-control">Create</button>
+                <button type="submit" class="btn btn-primary form-control">Update</button>
             </div>
             <div class="col-6 col-md-3">
                 <a asp-controller="Insurance" asp-action="Index" class="btn btn-secondary form-control">Back to List</a>

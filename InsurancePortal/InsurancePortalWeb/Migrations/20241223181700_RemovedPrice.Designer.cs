@@ -3,6 +3,7 @@ using InsurancePortalWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InsurancePortalWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241223181700_RemovedPrice")]
+    partial class RemovedPrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,13 +46,32 @@ namespace InsurancePortalWeb.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<decimal>("Price")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Insurances");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Comprehensive health insurance for individuals.",
+                            ImageUrl = "https://example.com/images/health-insurance-a.jpg",
+                            Name = "Health Insurance Plan A"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Full coverage car insurance with roadside assistance.",
+                            ImageUrl = "https://example.com/images/car-insurance-b.jpg",
+                            Name = "Car Insurance Plan B"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Protection for your home and belongings.",
+                            ImageUrl = "https://example.com/images/home-insurance-c.jpg",
+                            Name = "Home Insurance Plan C"
+                        });
                 });
 #pragma warning restore 612, 618
         }

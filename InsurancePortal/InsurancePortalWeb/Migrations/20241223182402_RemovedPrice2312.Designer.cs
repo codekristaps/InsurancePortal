@@ -3,6 +3,7 @@ using InsurancePortalWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InsurancePortalWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241223182402_RemovedPrice2312")]
+    partial class RemovedPrice2312
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,6 +53,32 @@ namespace InsurancePortalWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Insurances");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Comprehensive health insurance for individuals.",
+                            ImageUrl = "https://example.com/images/health-insurance-a.jpg",
+                            Name = "Health Insurance Plan A",
+                            Price = 299.99m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Full coverage car insurance with roadside assistance.",
+                            ImageUrl = "https://example.com/images/car-insurance-b.jpg",
+                            Name = "Car Insurance Plan B",
+                            Price = 499.99m
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Protection for your home and belongings.",
+                            ImageUrl = "https://example.com/images/home-insurance-c.jpg",
+                            Name = "Home Insurance Plan C",
+                            Price = 399.99m
+                        });
                 });
 #pragma warning restore 612, 618
         }
