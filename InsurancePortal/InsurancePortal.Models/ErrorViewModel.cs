@@ -1,4 +1,4 @@
-namespace InsurancePortalWeb.Models
+namespace InsurancePortal.Models
 {
     public class ErrorViewModel
     {

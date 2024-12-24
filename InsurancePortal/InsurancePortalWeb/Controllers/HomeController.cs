@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using InsurancePortalWeb.Models;
+using InsurancePortal.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsurancePortalWeb.Controllers

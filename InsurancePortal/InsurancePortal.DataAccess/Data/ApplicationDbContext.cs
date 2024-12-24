@@ -1,7 +1,7 @@
-﻿using InsurancePortalWeb.Models;
+﻿using InsurancePortal.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace InsurancePortalWeb.Data
+namespace InsurancePortal.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
