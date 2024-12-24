@@ -1,5 +1,5 @@
-﻿using InsurancePortalWeb.Data;
-using InsurancePortalWeb.Models;
+﻿using InsurancePortal.DataAccess;
+using InsurancePortal.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsurancePortalWeb.Controllers

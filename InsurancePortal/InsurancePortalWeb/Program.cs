@@ -1,4 +1,4 @@
-using InsurancePortalWeb.Data;
+using InsurancePortal.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 

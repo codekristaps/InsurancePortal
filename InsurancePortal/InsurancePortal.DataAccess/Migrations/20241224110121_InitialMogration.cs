@@ -2,12 +2,10 @@
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
-namespace InsurancePortalWeb.Migrations
+namespace InsurancePortal.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialMogration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,16 +24,6 @@ namespace InsurancePortalWeb.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Insurances", x => x.Id);
-                });
-
-            migrationBuilder.InsertData(
-                table: "Insurances",
-                columns: new[] { "Id", "Description", "ImageUrl", "Name", "Price" },
-                values: new object[,]
-                {
-                    { 1, "Comprehensive health insurance for individuals.", "https://example.com/images/health-insurance-a.jpg", "Health Insurance Plan A", 299.99m },
-                    { 2, "Full coverage car insurance with roadside assistance.", "https://example.com/images/car-insurance-b.jpg", "Car Insurance Plan B", 499.99m },
-                    { 4, "Protection for your home and belongings.", "https://example.com/images/home-insurance-c.jpg", "Home Insurance Plan C", 399.99m }
                 });
         }
 
