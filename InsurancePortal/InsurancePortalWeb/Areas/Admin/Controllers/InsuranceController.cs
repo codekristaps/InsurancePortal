@@ -2,8 +2,9 @@
 using InsurancePortal.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InsurancePortalWeb.Controllers
+namespace InsurancePortalWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class InsuranceController : Controller
     {
         private readonly ApplicationDbContext _db;
