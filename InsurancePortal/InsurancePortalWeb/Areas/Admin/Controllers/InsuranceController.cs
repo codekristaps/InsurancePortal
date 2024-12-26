@@ -1,10 +1,13 @@
 ﻿using InsurancePortal.DataAccess;
 using InsurancePortal.Models;
+using InsurancePortal.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsurancePortalWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class InsuranceController : Controller
     {
         private readonly ApplicationDbContext _db;

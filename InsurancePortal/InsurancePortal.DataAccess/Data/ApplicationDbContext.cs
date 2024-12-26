@@ -13,6 +13,7 @@ namespace InsurancePortal.DataAccess
         }
 
         public DbSet<Insurance> Insurances { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
