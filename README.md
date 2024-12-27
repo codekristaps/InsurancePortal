@@ -1,6 +1,6 @@
 # InsurancePortal
 
-This is one of my side projects that I have creted in C# using .NET and Entiry Framework.
+This is one of my side projects that I have creted in C# using .NET and Entity Framework.
 
 ### Main page
 
