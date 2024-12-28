@@ -1,6 +1,6 @@
 # InsurancePortal
 
-This is one of my side projects that I have creted in C# using .NET and Entity Framework.
+This is one of my side projects that I have creted in C# using .NET and Entity Framework. In the project you can register your account, use the portal as a customer or admin to manage the insurances.
 
 ### Main page
 
